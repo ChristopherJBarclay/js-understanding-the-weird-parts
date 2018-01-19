@@ -1,0 +1,27 @@
+Section 1:
+  Don't Imitate, Understand
+  Setup with Brackets.io and Google Chrome Developer Tools
+  Big Word Alerts
+  Frameworks
+  
+Section 2:
+  Syntax Parsers, Execution Contexts, Lexical Environments
+      - Syntax parser: a program that reads your code and determines what it does and if its grammar is valid. 
+          - Compilers and Interpreters: processes your code for the computer. 
+          - When you run your code, your code is not what the computer does, 
+              it is translated and that translation could tell the computer to do "extra stuff."
+      - Lexical Environments: where something sits physically in the code you write.
+          - Lexical: having to do with words or grammar
+          - A lexical environment exists in programming languages in which where you write something is important.
+      - Execution Context: a wrapper to help manage the code that is running. 
+          - Manages which part of the code (which lexical environment) is currently running.
+          
+  Name / Value Pairs and Objects
+      - Name / Value Pairs: key/value where a name (key) can change but it can only have one value.
+      - Object: A collection of name / value pairs. Values can be other objects. 
+      
+  Global Environment and Global Execution
+      - Code is always run inside an Execution Context (wrapper currently executing code in execution context)
+          - Global Execution Context = base execution context
+              Global Object | this (object)
+      - Global = Not Inside A Function
