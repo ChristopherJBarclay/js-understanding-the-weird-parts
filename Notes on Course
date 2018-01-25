@@ -4,6 +4,7 @@ Section 1:
   Big Word Alerts
   Frameworks
   
+  
 Section 2:
   Syntax Parsers, Execution Contexts, Lexical Environments
       - Syntax parser: a program that reads your code and determines what it does and if its grammar is valid. 
@@ -16,12 +17,46 @@ Section 2:
       - Execution Context: a wrapper to help manage the code that is running. 
           - Manages which part of the code (which lexical environment) is currently running.
           
+          
   Name / Value Pairs and Objects
       - Name / Value Pairs: key/value where a name (key) can change but it can only have one value.
       - Object: A collection of name / value pairs. Values can be other objects. 
+      
       
   Global Environment and Global Execution
       - Code is always run inside an Execution Context (wrapper currently executing code in execution context)
           - Global Execution Context = base execution context
               Global Object | this (object)
       - Global = Not Inside A Function
+
+
+  Hoisting and Creating an Execution Context
+      - Hoisting is often explained as the physical movement of variable and function declarations to the top of the code
+          - This is not entirely 
+      - Execution Context is Created in two phases.
+          - Creation phase: global object and this set up in memory. Outer environment also created.
+          - Sets up Memory Space for Variable and Functions - this is called "Hoisting"
+              - Puts a placeholder in these memory spaces, called 'undefined', until the code is run and a real value assigned
+              - Bad idea to rely on hoisting in any way. Can run into trouble when a value is undefined instead of assigned a value
+              - Good idea to always declare variables and functions before using them.
+      - The code you write is not actually what's being run, the code is interpreted by the javascript engine and your code is run through that interpretation
+      
+      
+  Javascript and 'undefined'
+      - undefined is a special value/keyword that variables receive during creation phase, when memory space is set up for the variable.
+      - If var is not used to declare a variable, memory space is never set up for it. It is not defined and will throw an error: Uncaught reference.
+          - Never set a variable to undefined yourself. You can do this, but should not because it is dangerous. 
+      - Let undefined always mean that "I, the programmer, have not set a value to this variable."
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
