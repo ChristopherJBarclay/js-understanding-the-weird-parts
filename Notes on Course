@@ -49,14 +49,72 @@ Section 2:
       - Let undefined always mean that "I, the programmer, have not set a value to this variable."
       
       
+  Execution Phase: Execution Context Runs Code    
+      - Your code is run line by line during this phase.
+      - Execution Phase happens after the global object, 'this', and the outer environment has been set up (and all variables and functions have memory set aside)
+  Code Execution - Line by Line after the Setup Phase   
       
       
+  Single Threaded, Synchronous Execution
+       - Meaning: in Javascript, only one thing is happening at a time. 
+      - Single Threaded: One command is being executed at a time. 
+          - This may not be true under the hood of the browser, because when we run our code, that is not all that is happening in the browser
+      - Synchronous Execution: One at a time, and In Order
+     
       
-      
-      
-      
-      
-      
-      
-      
+   Function Invocation and the Execution Stack
+      - Fundamental concept to understanding very important and advanced Javascript topics
+      - Invocation: Running/Calling a function. Run the function by using parenthesis ()...
+          // Example:
+          function b() {}
+          function a() { b(); }
+          a();
+          - Global Execution Context happens first, it will setup memory space for the functions. Then it will run the code line by line.
+          - At the line with a(); a new Execution Context is created and placed and placed on the Execution Stack
+     
+     
+    Execution Stack: One on top of the other on top of the other, whichever is on top is currently running.
+          - Everytime you execute or invoke a function, a new execution context is created and put on the Execution Stack.
+          - Once one execution context ends, it will be popped off the stack, returning to the previous stack. 
+          // Example: 
+          function a() {
+            b();
+            var c;
+          }
+          function b() {
+            var d;
+          }
+          a();
+          var d;
+          - Memory space is set up during Execution Context for functions a and b.
+          - Once we get down to the line with a(); it will invoke function a. that will be put on top of the stack. 
+          - Function a invokes function b, which then gets put on top of the stack. Only once function a is done running will it be popped off the stack
+          - Every time a function is called, a new Execution Context is created for that function, 'this' is created for that function, and any variables within the function are setup
+              - Once the function completes execution, it is popped off the top of the stack and the interpreter moves back to the next item in the stack
+   
+   
+   Functions, Context, and Variable Environments
+      - Variable Environments = Where the variables live when they are created, and how they relate to each other in memory.
+      - Each Execution Context has its own Variable Environment
+          - Scope = where are we able to see the variable
+   
+   
+   The Scope Chain
+      - If you do not declare a variable inside a function, inside its own variable environment...
+          - Javascript will use the reference to the outer environment, the global environment created at Execution Phase
+              - Lexical Environment... where something is written physically is important. It determines where things will sit in memory.
+              - Function B sits lexically on top of the global environment, it's not inside function a. It's on the same level as other global objects
+       - If you ask for a variable, and it cannot find that variable in the current execution environment, Javascript will look for that variable down in the execution stack, 
+          and where that function sits lexically determines where it will find the variable. In this case the global execution environment.
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
       
