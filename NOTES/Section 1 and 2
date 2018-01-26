@@ -24,10 +24,10 @@ Section 2:
       
       
   Global Environment and Global Execution
+      Global = Not Inside A Function
       - Code is always run inside an Execution Context (wrapper currently executing code in execution context)
           - Global Execution Context = base execution context
               Global Object | this (object)
-      - Global = Not Inside A Function
 
 
   Hoisting and Creating an Execution Context
@@ -106,7 +106,13 @@ Section 2:
               - Function B sits lexically on top of the global environment, it's not inside function a. It's on the same level as other global objects
        - If you ask for a variable, and it cannot find that variable in the current execution environment, Javascript will look for that variable down in the execution stack, 
           and where that function sits lexically determines where it will find the variable. In this case the global execution environment.
-   
+      
+      Summary:
+       * If a variable is not declared, Javascript will keep looking down the stack, until it reaches global (global = outside of all functions). 
+          A function's outer environment is the function it was declared in, all the way back until you hit global. 
+       
+       * Where a function sits lexically, determines its outer environment reference. 
+          As each function is executed, execution contexts stack up, and the code is running synchronously.
    
    
    
