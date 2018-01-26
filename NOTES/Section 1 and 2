@@ -23,14 +23,14 @@ Section 2:
       - Object: A collection of name / value pairs. Values can be other objects. 
       
       
-  Global Environment and Global Execution
+  GLOBAL Environment and Global Execution
       Global = Not Inside A Function
       - Code is always run inside an Execution Context (wrapper currently executing code in execution context)
           - Global Execution Context = base execution context
               Global Object | this (object)
 
 
-  Hoisting and Creating an Execution Context
+  HOISTING and Creating an Execution Context
       - Hoisting is often explained as the physical movement of variable and function declarations to the top of the code
           - This is not entirely 
       - Execution Context is Created in two phases.
@@ -49,14 +49,14 @@ Section 2:
       - Let undefined always mean that "I, the programmer, have not set a value to this variable."
       
       
-  Execution Phase: Execution Context Runs Code    
+  EXECUTION PHASE: Execution Context Runs Code    
       - Your code is run line by line during this phase.
       - Execution Phase happens after the global object, 'this', and the outer environment has been set up (and all variables and functions have memory set aside)
   Code Execution - Line by Line after the Setup Phase   
       
       
   Single Threaded, Synchronous Execution
-       - Meaning: in Javascript, only one thing is happening at a time. 
+      In Javascript, only one thing is happening at a time. 
       - Single Threaded: One command is being executed at a time. 
           - This may not be true under the hood of the browser, because when we run our code, that is not all that is happening in the browser
       - Synchronous Execution: One at a time, and In Order
@@ -73,7 +73,7 @@ Section 2:
           - At the line with a(); a new Execution Context is created and placed and placed on the Execution Stack
      
      
-    Execution Stack: One on top of the other on top of the other, whichever is on top is currently running.
+    EXECUTION STACK: One on top of the other on top of the other, whichever is on top is currently running.
           - Everytime you execute or invoke a function, a new execution context is created and put on the Execution Stack.
           - Once one execution context ends, it will be popped off the stack, returning to the previous stack. 
           // Example: 
@@ -94,12 +94,12 @@ Section 2:
    
    
    Functions, Context, and Variable Environments
-      - Variable Environments = Where the variables live when they are created, and how they relate to each other in memory.
+      Variable Environments = Where the variables live when they are created, and how they relate to each other in memory.
       - Each Execution Context has its own Variable Environment
           - Scope = where are we able to see the variable
    
    
-   The Scope Chain
+   SCOPE CHAIN
       - If you do not declare a variable inside a function, inside its own variable environment...
           - Javascript will use the reference to the outer environment, the global environment created at Execution Phase
               - Lexical Environment... where something is written physically is important. It determines where things will sit in memory.
@@ -115,7 +115,26 @@ Section 2:
           As each function is executed, execution contexts stack up, and the code is running synchronously.
    
    
+   LET and ES6, more on Scope
+      Scope = Where a variable is available in your code. And if it's truly the same variable, or a copy of it.
+      - If you call the same function twice, the variables look like they are the same, but it is actually two different variables in memory.
+      
+      let - can be used instead of var, or in its place
+          - Not allowed to use the variable until the line of code that declares the variable is run. Will give error.
+              - During Execution Phase, the variable is still created in memory and set to undefined. 
+          - Declare inside a Block (within curly braces) = Variable only available inside this block.  
+              - In a For Loop using let to declare a variable, each iteration of the loop will create a new variable in memory. 
+                - This allows for Block Scoping (which will be learned later in course)
+                
    
+   ASYNCHRONOUS CALLBACKS
+     Asynchronous = more than one at a time.
+        - Such as click events and callback functions, which are asynchronous
+     Javascript Engine - Does not exist by itself, other elements, engines, and pieces of code run outside of the javascript engine  
+        - Rendering Engine - renders / prints / paints to screen the web pages you're looking at.
+        - HTTP Request - going out and getting data, sending and receiving requests.
+        - Everything outside of Javascript Engine is running Asynchronously inside the browser along with the Javscript engine.
+        - Everything inside the Javascript Engine is running Synchronously. 
    
    
    
