@@ -130,16 +130,18 @@ Section 2:
    ASYNCHRONOUS CALLBACKS
      Asynchronous = more than one at a time.
         - Such as click events and callback functions, which are asynchronous
-     Javascript Engine - Does not exist by itself, other elements, engines, and pieces of code run outside of the javascript engine  
+     Javascript Engine - Does not exist by itself, other elements, engines, and pieces of code run outside of the javascript engine, inside the browser  
+        
+        Other things running inside the browser include:
         - Rendering Engine - renders / prints / paints to screen the web pages you're looking at.
-        - HTTP Request - going out and getting data, sending and receiving requests.
+        - HTTP Requests - going out and getting data, sending and receiving requests.
         - Everything outside of Javascript Engine is running Asynchronously inside the browser along with the Javscript engine.
         - Everything inside the Javascript Engine is running Synchronously. 
    
-   
-   
-   
-   
-   
-   
-      
+      EVENT QUEUE - events and notifications of events that are happening in the browser, outside of the JS engine.
+        - What happens when a function is supposed to respond to an event (like a click event) ?
+        - Once the Execution Stack is EMPTY, the Event Queue gets looked at by JavaScript. 
+            - Then it runs any functions need to be run by the items in the Event Queue
+        
+        So, it isn't really asynchronous... JS engine must be empty first. 
+        The browser asynchronously puts things into the event queue, but it doesn't process them until the JS is finished running. 
