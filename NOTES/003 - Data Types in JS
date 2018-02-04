@@ -1,4 +1,4 @@
-DATA TYPES IN JAVASCRIPT
+Data Types in JavaScript
     DYNAMIC TYPING - you do not tell the engine what type of data a variable holds, the engine figures this out while your code is running. 
     vs Static Typing languages like Java, where you tell the engine what kind of data you intend to hold inside a variable. 
 
@@ -48,12 +48,18 @@ Comparison Operators - making what we have learned so far in the course make sen
     - Strict Equality (===) and Strict Inequality (!==) do not coerce the value. They check for the same type and the same value.
     
 
-Existence and Booleans - all things that imply the lack of existence, coerce to false as a boolean. 
+Existence and Booleans 
+     - All things that imply the lack of existence, coerce to false as a boolean. 
+     - If statements always convert (coerce) to a boolean.
 
 
+Default Values
+     || (or) does not just return true and false. If only one value is false, || returns the value that can be coerced to true. 
+     function(name) {name = name || '<Your name here>';} --- this will assign name to name if it is defined or default value if not.
 
 
-
-
-
-
+FRAMEWORKS - It is important that different files do not collide with each other (such as two libraries having the same function name)
+     - Importing multiple libraries or frameworks into your code via script tags does not separate the code in any way. It does not create a new Execution Environment
+     - They are stacking the code on top of each other. 
+     - We can check to see if a function name already exists in the global execution context:
+            window.libraryName = window.libraryName || "Lib 2";
