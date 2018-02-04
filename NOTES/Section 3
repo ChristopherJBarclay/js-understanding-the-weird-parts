@@ -1,1 +1,59 @@
+DATA TYPES IN JAVASCRIPT
+    DYNAMIC TYPING - you do not tell the engine what type of data a variable holds, the engine figures this out while your code is running. 
+    vs Static Typing languages like Java, where you tell the engine what kind of data you intend to hold inside a variable. 
+
+
+PRIMITIVE TYPES - A type of data that represents a single value. Not an object. 
+    6 different types of primitive data can be stored in javascript variables:
+        - undefined - a lack of existence; a variable that has not been set yet. 
+              (you should never set a variable to this value, so that you always know an undefined var has not been set yet)
+        - null - represents a lack of existence, but a variable type that you can set 
+              (you should set a var to this value if you don't want it to have a value, not undefined)
+        - boolean - true or false
+        - number - floating point number (there is always a decimal)
+              (only one numeric type in JS; there is no integer or decimal number types, only floating point numbers in JS)
+        - string - sequence of characters (both " or ' can be used) 
+        - symbol - ES6. We will ignore this type in this course. 
+
+    These primitive types are important to understand some of the funky and weird things that can happen in JS.
+
+
+OPERATORS - a special function that is syntatically (written) differently than regular functions.
+    - Take two parameters and return one result. 
+        The + sign is an operator. It is actually a function:
+            function +(a,b) {return a+b;}
+            
+    - In-Fix Notation - The function name (the operator) sits between the two parameters. (eg: 3+4;)
+    - Pre-Fix Notation - Operator comes before the two parameters (eg: +3,4;)
+    - Post-Fix Notation - Operator comes after the two parameters (eg: 3,4+;). Old-school Italian calculators work this way.
+
+
+Operator PRECEDENCE - which operator function gets called first (higher precedence wins)
+    - Mozilla Developer Network (MDN) - Operator Precedence for Javascript. Use that or the pdf from the course.
+    - Multiplication has a higher precedence than Addition, so multiplication will happen first. 
+    
+Operator ASSOCIATIVITY - what order an operator function gets called in when their precedence is the SAME: left to right, or right to left
+    - All operators return a value, even a = b returns the value of b
+
+
+COERSION - converting a value from one type to another. This happens often in JS because it is dynamically typed. 
+    *** If you add a number to a string, JS turns the number into a string and concatenates the two strings together.
+    *   true and false coerced to numbers become 1 (true) and 0 (false)
+    -   undefined coerced to a number becomes NaN (not a number)
+    -   null coerced to a number becomes 0
+    -   "" (empty string) coerced to a number becomes a 0. 
+
+
+Comparison Operators - making what we have learned so far in the course make sense. 
+    - Strict Equality (===) and Strict Inequality (!==) do not coerce the value. They check for the same type and the same value.
+    
+
+Existence and Booleans - all things that imply the lack of existence, coerce to false as a boolean. 
+
+
+
+
+
+
+
 
