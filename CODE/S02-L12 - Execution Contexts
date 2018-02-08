@@ -1,4 +1,4 @@
-// EXECUTION CONTEXT
+// EXECUTION CONTEXTS
 
 function b() {
     console.log('Called b!');
