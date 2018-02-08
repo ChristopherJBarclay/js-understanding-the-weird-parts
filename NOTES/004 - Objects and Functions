@@ -1,0 +1,28 @@
+OBJECTS AND FUNCTIONS - Section 4
+    5 hours of content (largest section of the class)
+
+
+Objects and the Dot
+    Three types of properties / methods of an object... 
+    - Primitive "property"
+    - Object "property"
+    - Function "method"
+    These each sit in memory have a kind of address in your computer's memory. 
+    
+    Bracket Notation VS Dot Notation
+        - Bracket Notation = Computed Member Access  (3rd highest precedence on the operator precedence list)
+            - Requires quotes around the property of the object
+        - Dot Notation = Member Access  (2nd highest precedence on the operator precedence list)
+            - Don't need to put quotes around the property of the object. 
+        These two work the same, but dot notation (member access) will act the same as computed member access
+        
+        - Preferred method is the Dot Operator instead of Bracket notation, it's much cleaner and easier to debut later on.
+
+
+Objects and OBJECT LITERALS
+    - Best way to create a new object is not with ' new Object(); '
+    var person = {};  // this is an OBJECT LITERAL
+    var person = { firstname: 'Tony', lastname: 'Alicea' }; 
+    - Always inititalize objects like this. Faster and more efficient.
+    - Also can write it on multiple lines and it is treated like one line of code until it hits the semicolon ;
+    
