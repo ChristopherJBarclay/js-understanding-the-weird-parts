@@ -1,5 +1,5 @@
-// OJBECT LITERALS
-// in JS there are often more than one way to do something
+// OBJECT LITERALS
+// in JS there's usually more than one way to do something
 
 var person = {};  // JS assumes this is object creation
 // can also inititalize objects here.
