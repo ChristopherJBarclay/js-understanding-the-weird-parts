@@ -1,0 +1,38 @@
+SECTIONS 4 - OBJECTS AND FUNCTIONS - part 2
+
+    Section 4 is 5 hours of content (largest section of the class), so I have broken it down into multiple parts.
+
+
+JSON and Object Literals
+    JSON = JavaScript Ojbect Notation - inspired by object literal syntax in JS
+    - Data used to be sent across the internet using XML format. But it wasted too much bandwidth doubling up on property names.
+    - Now we use JSON to send data across the internet, which is like a subset of Object Literals.
+    
+    JSON objects are objects converted into strings
+    - A JSON string is an Object Literal but not all Object Literals are JSON objects. 
+    - All properties in JSON strings must be wrapped in quotes.
+    
+        - Can STRINGIFY javascript objects into JSON strings:
+            console.log(JSON.stringify(objectLiteral));
+        
+        - Can parse a JSON string and convert it into a javascript object:
+            var jsonValue = JSON.parse('{ "firstname": "Mary", "isAProgrammer": true }');
+            
+    - JSON is more strict than Object Literals. No functions as values for JSON strings.
+    
+
+
+FUNCTIONS AND OBJECTS
+    This New Concept that will transform you from someone who uses Javascript to someone who deeply understands it
+      and isn't scared of some of the weird or odd things that happen inside of it. Other programming languages cannot match this.
+      
+  FIRST CLASS FUNCTIONS
+    In JS, functions are objects.
+    - Everything you can do with other types (objects, strings, numbers, booleans), you can do with Functions. 
+    - You can assign variables to have a value that is a function. You can pass functions around as parameters to other functions.
+    - You can create functions on the fly with a kind of literal syntax.
+    This changes the way you can program. Completely different approaches to solving problems.
+    
+    
+    
+
