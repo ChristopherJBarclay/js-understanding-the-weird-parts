@@ -1,0 +1,25 @@
+// VARIABLE ENVIRONMENTS
+
+function b() {
+    var myVar;
+    console.log(myVar);
+}
+
+function a() {
+    var myVar = 2;
+    console.log(myVar);
+    b();
+}
+
+// this happens first, in global environment/ window
+var myVar = 1;  
+console.log(myVar);
+// then this execution happens second, and each execution context has its own variable environment. 
+a();
+console.log(myVar);
+// this console log should show another 1 for myVar
+
+
+
+// what is myVar going to be at any given time?
+// even tho myVar is declared three times, they are each unique and distinct
