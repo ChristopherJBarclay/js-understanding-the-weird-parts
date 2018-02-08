@@ -1,0 +1,19 @@
+// THE SCOPE CHAIN
+
+function b() {
+	console.log(myVar);
+    // what will happen here, since we did not declare myVar?
+    
+    
+    // if function b is moved to inside function a, changing its lexical environment, it will no longer be callable/invokable from the global environment
+    
+    // uncaught reference if it is within another function, because function b is not in the global environ
+}
+
+function a() {
+	var myVar = 2;
+	b();
+}
+
+var myVar = 1;
+a();
