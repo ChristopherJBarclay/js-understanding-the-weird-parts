@@ -1,0 +1,36 @@
+// FAKING NAMESPACES
+
+var greet = 'Hello!';
+var greet = 'Hola!'; 
+
+console.log(greet);
+// what will we get? Hello or Hola? Hola because it's last in order
+
+var english = {};
+var spanish = {};
+
+english.greet = 'Hello!';
+spanish.greet = 'Hola!';
+
+console.log(english);
+
+/*
+This will not work:
+
+english.greetings.greet = 'Hello';
+
+Cannot create nested objects on the fly.
+We need to define the nested object first...
+
+var english = {};
+english.greetings = {};
+english.greetings.greet = 'Hello!';
+
+or 
+
+var english = {
+    greetings: {
+        basic: 'Hello!'
+    }
+};
+*/
