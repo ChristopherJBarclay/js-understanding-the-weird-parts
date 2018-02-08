@@ -1,0 +1,55 @@
+// JSON AND OBJECT LITERALS
+
+var objectLiteral = {
+    firstname: 'Mary',
+    isAProgrammer: true
+}
+
+console.log(objectLiteral);
+
+
+console.log(JSON.stringify(objectLiteral));
+// this will convert an object into a JSON string.
+// built-in feature of Javascript
+
+
+var jsonValue = JSON.parse('{ "firstname": "Mary", "isAProgrammer": true }');
+// takes a string and parses it into an object.
+console.log(jsonValue);
+
+
+// in previous years, data was sent over the internet in various formats. The format that was landed upon for a while was XML. 
+
+/* this is not valid Javascript...
+
+<object>
+    <firstname>Mary</firstname>
+    <isAProgrammer>true</isAProgrammer>
+</object>
+
+*/
+
+// huge amount of wasted bandwidth, especially having to say the property (such as firstname) twice... Big problem when dealing with a lot of data.
+
+/*
+
+Then it was agreed upon to send strings like this:
+
+This is a fine Object Literal format:
+{
+    firstname: 'Mary',
+    isAProgrammer: true
+}
+
+JSON format must wrap properties in quotes:
+
+{
+    "firstname": "Mary",
+    "isAProgrammer": true
+}
+
+// JSON is technically a subset of the Object Literal syntax. Not all Object Literal is JSON though.
+*/
+
+console.log(JSON.stringify(objectLiteral));
+// this will convert an object into a JSON string
