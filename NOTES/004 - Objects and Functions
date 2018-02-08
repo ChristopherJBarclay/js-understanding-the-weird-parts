@@ -2,7 +2,7 @@ OBJECTS AND FUNCTIONS - Section 4
     5 hours of content (largest section of the class)
 
 
-Objects and the Dot
+Objects and The DOT
     Three types of properties / methods of an object... 
     - Primitive "property"
     - Object "property"
@@ -26,3 +26,14 @@ Objects and OBJECT LITERALS
     - Always inititalize objects like this. Faster and more efficient.
     - Also can write it on multiple lines and it is treated like one line of code until it hits the semicolon ;
     
+
+FAKING NAMESPACES
+    Namespace - a container for variables and functions. Typically to keep separate variables and functions with the same name.
+    JS DOES NOT HAVE NAMESPACES. We can fake it in JS.
+    - What if two functions have the same name but come from two different libraries? (such as a greeting function)
+    - We would have a separate container for the two different versions of the function. (such as a Spaninsh and English greeting)
+    - We can fake it by putting them each in separate objects. spanish.greet and english.greet can be assigned their separate values.
+    - This stops collisions between programmers if they make a function or variable with the same name.
+    
+        - Cannot do something like this:  english.greetings.greet = 'Hello!';
+        - Must define objects inside of objects before defining new properties of those nested objects.
