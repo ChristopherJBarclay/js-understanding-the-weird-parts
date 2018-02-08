@@ -1,0 +1,38 @@
+// OJBECT LITERALS
+// in JS there are often more than one way to do something
+
+var person = {};  // JS assumes this is object creation
+// can also inititalize objects here.
+
+var Tony = {
+    firstname: 'Tony', 
+    lastname: 'Alicea',
+    address: {
+        street: '111 Main St.',
+        city: 'New York',
+        state: 'NY'
+        
+    }
+};
+// ^ this is still treated as one line of code.
+// this is the preferred way to create an object.
+
+function greet(person) {
+    console.log('Hi ' + person.firstname);
+}
+
+greet(Tony);
+
+greet({ 
+    firstname: 'Mary', 
+    lastname: 'Doe' 
+});
+// can create an object on the fly like this. 
+
+greet({ firstname: 'Chris', lastname: 'B' });
+// one line version
+
+Tony.address2 = {
+    street: '333 Second St.'
+};
+// can mix and match these object literal creations with dot or bracket notation and add new properties and new objects as properties to an already existing object.
