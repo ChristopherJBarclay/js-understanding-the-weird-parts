@@ -1,5 +1,6 @@
-OBJECTS AND FUNCTIONS - Section 4
-    5 hours of content (largest section of the class)
+Section 4 - OBJECTS AND FUNCTIONS - part 1
+
+    Section 4 is 5 hours of content (largest section of the class), so I have broken it down into multiple parts.
 
 
 Objects and The DOT
@@ -30,6 +31,7 @@ Objects and OBJECT LITERALS
 FAKING NAMESPACES
     Namespace - a container for variables and functions. Typically to keep separate variables and functions with the same name.
     JS DOES NOT HAVE NAMESPACES. We can fake it in JS.
+    
     - What if two functions have the same name but come from two different libraries? (such as a greeting function)
     - We would have a separate container for the two different versions of the function. (such as a Spaninsh and English greeting)
     - We can fake it by putting them each in separate objects. spanish.greet and english.greet can be assigned their separate values.
