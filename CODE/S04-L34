@@ -1,0 +1,9 @@
+function greet() {
+  console.log('hi');
+}
+
+greet.language = 'english';
+// interesting, no?
+
+console.log(greet.language);
+// the value is there in memory, a property attached to a function, just like any object. 
