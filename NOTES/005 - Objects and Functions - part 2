@@ -33,6 +33,19 @@ FUNCTIONS AND OBJECTS
     - You can create functions on the fly with a kind of literal syntax.
     This changes the way you can program. Completely different approaches to solving problems.
     
-    
-    
+    Functions, because they are objects, can have all kinds of properties attached to them:
+        - primitives, objects, other functions, and they have two special properties: 
+            - Name (can be anonymous ((no name)) ) and Code, which holds the actual lines of code you wrote for the function. 
+                - The code property is invocable, meaning your code can be invoked via this property. 
+    Syntax for this can look weird if you don't understand this concept. 
+
+
+Function STATEMENTS and Function EXPRESSIONS
+    Expression: A unit of code that results in a value. It doesn't have to save to a variable. 
+    Statements just do work, an expression returns a value.
+    - Type 1+2; into dev tools and it returns 3, even though we didn't save it to a variable. This is an expression.
+        - if (a ===3) {} - the a===3 is an expression, but the 'if' is just a statement. It does not return anything. 
+
+
+
 
